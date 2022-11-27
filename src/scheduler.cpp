@@ -17,6 +17,7 @@ int main(int argc, char* argv[]) {
     std::vector<task> task_list;
     u_int count = 0;
     int j = 0;
+    std::queue<task> ready_queue;
 
     
     if (argc == 1 || argc > 4) {
