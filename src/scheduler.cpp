@@ -1,6 +1,9 @@
 #include <iostream>
+#include <array>
+#include <vector>
+#include <queue>
 #include "../includes/inputs.h"
-#include "../includes/task_list.h"
+#include "../includes/task.h"
 #include "../includes/scheduler.h"
 
 int main(int argc, char* argv[]) {
@@ -9,9 +12,12 @@ int main(int argc, char* argv[]) {
     file_name = argv[1];
     policy = NONE;
 
-    static const int MAX_TASK_NUM = 32;
-    task task_array[MAX_TASK_NUM];
+    std::array<task,MAX_TASK_NUM> task_array;
+    std::vector<task> finish_array;
+    std::vector<task> task_list;
     u_int count = 0;
+    int j = 0;
+
     
     if (argc == 1 || argc > 4) {
         std::cout << "Usage: scheduler file_name [FCFS|SRTF|RR] [time_quantum]\n";
@@ -56,13 +62,17 @@ int main(int argc, char* argv[]) {
 
         switch (policy) {
             case FCFS:
-                std::cout << "FCFS\n";
+                while (j<count) {
+                    task_list.push_back(task_array[j]);
+                    j++;
+                }
+                fcfs_policy(task_list, count, finish_array);
                 break;
             case SRTF:
-                std::cout << "SRTF\n";
+                
                 break;
             case RR:
-                std::cout << "RR\n";
+                
                 break;
             default:
                 break;
