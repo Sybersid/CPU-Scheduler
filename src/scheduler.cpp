@@ -74,7 +74,7 @@ int main(int argc, char* argv[]) {
                 
                 break;
             case RR:
-                
+                rr_policy(task_list, count, time_quantum, finish_array, wait_time);
                 break;
             default:
                 break;
