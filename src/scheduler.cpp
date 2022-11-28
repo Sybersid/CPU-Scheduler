@@ -16,7 +16,6 @@ int main(int argc, char* argv[]) {
     std::vector<task> finish_array;
     std::vector<task> task_list;
     u_int count, wait_time = 0;
-    int j = 0;
     std::queue<task> ready_queue;
 
     
@@ -61,12 +60,14 @@ int main(int argc, char* argv[]) {
 
         }
 
-        switch (policy) {
-            case FCFS:
-                while (j<count) {
+        int j = 0;
+        while (j<count) {
                     task_list.push_back(task_array[j]);
                     j++;
                 }
+
+        switch (policy) {
+            case FCFS:
                 fcfs_policy(task_list, count, finish_array, wait_time);
                 break;
             case SRTF:
@@ -78,5 +79,7 @@ int main(int argc, char* argv[]) {
             default:
                 break;
         };
+        
+        stats(count, finish_array, wait_time);
     
 }
