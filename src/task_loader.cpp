@@ -22,7 +22,7 @@ void task_loader(char* file_name, std::array<task,MAX_TASK_NUM> &task_array, u_i
             task_array[i].remaining_time = -1;
         }
         
-        printf("There are %u tasks loaded from %s. Press any key to continue ...\n", count, file_name);
+        printf("There are %u tasks loaded from %s. Press any key to continue ...", count, file_name);
         getchar();
         fclose(fp);
         printf("========================================================================================\n");

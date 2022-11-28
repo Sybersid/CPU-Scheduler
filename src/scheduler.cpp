@@ -15,7 +15,7 @@ int main(int argc, char* argv[]) {
     std::array<task,MAX_TASK_NUM> task_array;
     std::vector<task> finish_array;
     std::vector<task> task_list;
-    u_int count = 0;
+    u_int count, wait_time = 0;
     int j = 0;
     std::queue<task> ready_queue;
 
@@ -67,7 +67,7 @@ int main(int argc, char* argv[]) {
                     task_list.push_back(task_array[j]);
                     j++;
                 }
-                fcfs_policy(task_list, count, finish_array);
+                fcfs_policy(task_list, count, finish_array, wait_time);
                 break;
             case SRTF:
                 
