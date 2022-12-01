@@ -5,9 +5,9 @@ void task_loader(char* file_name, std::array<task,MAX_TASK_NUM> &task_array, u_i
 
 void fcfs_policy(std::vector<task> &task_list, u_int &count, std::vector<task> &finish_array, u_int &wait_time);
 
-// void srtf_policy(task task_array[], u_int count, task finish_array[]);
+void srft_policy(std::vector<task> &task_list, u_int &count, std::vector<task> &finish_array, u_int &wait_time);
 
-void rr_policy(std::vector<task> &task_list, u_int &count, u_int &time_quantum, std::vector<task> &finish_array, u_int &wait_time);
+void rr_policy(std::vector<task> &task_list, u_int &count, int &time_quantum, std::vector<task> &finish_array, u_int &wait_time);
 
 void stats(u_int &count, std::vector<task> &finish_array, u_int &wait_time);
 

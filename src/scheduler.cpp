@@ -46,7 +46,7 @@ int main(int argc, char* argv[]) {
 
             } else if (policy_input == "RR") {
                 if (argc == 4) {
-                    time_quantum = (u_int)(*argv[3]-'0');
+                    time_quantum = atoi(argv[3]);
                     policy = RR;
                     std::cout << "Scheduling Policy: " << policy_input << "\n";
                     task_loader(file_name, task_array, count);
@@ -71,7 +71,7 @@ int main(int argc, char* argv[]) {
                 fcfs_policy(task_list, count, finish_array, wait_time);
                 break;
             case SRTF:
-                
+                srft_policy(task_list, count, finish_array, wait_time);
                 break;
             case RR:
                 rr_policy(task_list, count, time_quantum, finish_array, wait_time);
