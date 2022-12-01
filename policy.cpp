@@ -4,6 +4,11 @@
 #include <queue>
 #include "includes/task.h"
 
+/*
+policy.cpp contains 3 different functions to run each policy. The inputs of the each function are task_list, count,
+finish_array, and wait_time.
+*/
+
 void fcfs_policy(std::vector<task> &task_list, u_int &count, std::vector<task> &finish_array, u_int &wait_time) {
     u_int clock;
     std::queue<task> ready_queue;

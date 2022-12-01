@@ -3,6 +3,11 @@
 #include <array>
 #include "includes/task.h"
 
+/*
+read.cpp contains the task_loader function which populates the task_array which each task and its
+different fields with the approriate values.
+*/
+
 void task_loader(char* file_name, std::array<task,MAX_TASK_NUM> &task_array, u_int &count) {
 
     FILE* fp;

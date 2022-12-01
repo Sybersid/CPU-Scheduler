@@ -6,6 +6,11 @@
 #include "includes/task.h"
 #include "includes/scheduler.h"
 
+/*
+scheduler.cpp is the driver code for the program. It contains the command-line parser, error-handler, and
+a switch-case mechanism to run a specific policy.
+*/
+
 int main(int argc, char* argv[]) {
     
     policy_type policy;

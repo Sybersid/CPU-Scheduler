@@ -2,6 +2,11 @@
 #include <vector>
 #include "includes/task.h"
 
+/*
+stats.cpp uses finish_array, count, and wait time to calculate the turnaround, response, and waiting time as well as
+cpu usage.
+*/
+
 void stats(u_int &count, std::vector<task> &finish_array, u_int &wait_time) {
     float waiting_time, response_time, turnaround_time, cpu_usage = 0;
 
