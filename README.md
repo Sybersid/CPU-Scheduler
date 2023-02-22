@@ -4,4 +4,4 @@ Event-driver simulation of a CPU Scheduler with 3 scheduling polilcies: First Co
 
 Run "make scheduler" and "./scheduler [tast.list] [policy] [time_quantum (only RR)]
 
-More information in Cpu Scheduling Report.
+More information in CPU Scheduling Report.
